@@ -37,8 +37,8 @@
 
   if (isset($_POST['Submit'])) {
   	$region = $_POST['region'];
-    $titre = $_POST['titre'];
-    $contenu = $_POST['contenu'];
+    $titre = $_POST['intitule'];
+    $contenu = $_POST['description'];
     $date = $_POST['date'];
 
     /*$name = $_POST['name'];

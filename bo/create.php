@@ -25,57 +25,77 @@
 <link rel="stylesheet" href="css/templatemo-style.css">
   </head>
   <body>
+     <!-- PRE LOADER -->
+     <section class="preloader">
+          <div class="spinner">
 
-    <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
-      <div class="container">
-        <a class="navbar-brand" href="index.php">PHP CRUD WITH IMAGE</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto"></ul>
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item"><a class="btn btn-outline-danger" href="index.php"><i class="fa fa-sign-out-alt"></i></a></li>
-            </ul>
-        </div>
-      </div>
-    </nav>
+               <span class="spinner-rotate"></span>
+               
+          </div>
+     </section>
+
+
+     <!-- MENU -->
+     <section class="navbar custom-navbar navbar-fixed-top" role="navigation">
+          <div class="container">
+
+               <div class="navbar-header">
+                    <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                    </button>
+
+                    <!-- lOGO TEXT HERE -->
+                    <a href="index.php" class="navbar-brand">Climat<span> - </span>Planet</a>
+               </div>
+
+               <!-- MENU LINKS -->
+               <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-nav-first">
+                         <li><a href="index.php" class="smoothScroll">Accueil</a></li>
+                         <li><a href="show.php" class="smoothScroll">Liste Actualités</a></li>
+                    </ul>
+               </div>
+
+          </div>
+     </section>
 
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-md-6">
             <div class="card">
-              <div class="card-header">Ajouter unn article </div>
+              <div class="card-header">Ajouter un article </div>
               <div class="card-body">
                 <form class="" action="add.php" method="post" enctype="multipart/form-data">
                     <div class="form-group">
                       <label for="region">Region: </label>
                       <select class="form-control" id="region" name="region">
                         <?php for($i=0; $i<count($region); $i++){ ?>
-                          <option value=<?php echo $region[$i]['id'] ?>><?php echo $region[$i]['nom'] ?></option>
+                          <option value=<?php echo $region[$i]['idRegion'] ?>><?php echo $region[$i]['nom'] ?></option>
                         <?php } ?>
                       </select>
                     </div>
                     <div class="form-group">
                       <label for="name">Titre:</label>
-                      <input type="text" class="form-control" name="titre"  placeholder="Titre">
+                      <input type="text" class="form-control" name="intitule"  placeholder="Titre">
                     </div>
                     <div class="form-group">
                       <label for="contact">Contenu:</label>
-                      <textarea type="text" class="form-control" name="contenu"></textarea>
+                      <textarea type="text" class="form-control" name="description"></textarea>
                     </div>
                     <div class="form-group">
                       <label for="email">Date Publication(YYYY-MM-DD):</label>
-                      <input type="date" class="form-control" name="date" placeholder="Date Publication">
+                      <input type="date" class="form-control" name="date" placeholder="Date de Publication">
                     </div>
                     <div class="form-group">
-                      <label for="image">Choose Image:</label>
+                      <label for="image">Choisissez une Image:</label>
                       <div class="col-md-12">
                         <input type="file" class="form-control" name="image" value="">
                       </div>
                     </div>
                     <div class="form-group">
-                      <button type="submit" name="Submit" class="btn btn-primary waves">Submit</button>
+                      <button type="submit" name="Submit" class="btn btn-primary waves">Valider</button>
                     </div>
                 </form>
               </div>

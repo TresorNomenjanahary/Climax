@@ -40,21 +40,41 @@
     <link rel="stylesheet" href="css/templatemo-style.css">
   </head>
   <body>
+     <!-- PRE LOADER -->
+     <section class="preloader">
+          <div class="spinner">
 
-      <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
-        <div class="container">
-          <a class="navbar-brand" href="index.php">Liste </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav mr-auto"></ul>
-              <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a class="btn btn-primary" href="create.php"><i class="fa fa-user-plus"></i></a></li>
-              </ul>
+               <span class="spinner-rotate"></span>
+               
           </div>
-        </div>
-      </nav>
+     </section>
+
+
+     <!-- MENU -->
+     <section class="navbar custom-navbar navbar-fixed-top" role="navigation">
+          <div class="container">
+
+               <div class="navbar-header">
+                    <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                    </button>
+
+                    <!-- lOGO TEXT HERE -->
+                    <a href="index.php" class="navbar-brand">Climat<span> - </span>Planet</a>
+               </div>
+
+               <!-- MENU LINKS -->
+               <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-nav-first">
+                         <li><a href="index.php" class="smoothScroll">Accueil</a></li>
+                         <li><a href="show.php" class="smoothScroll">liste Actualités</a></li>
+                    </ul>
+               </div>
+
+          </div>
+     </section>
 
       <div class="container">
         <div class="row justify-content-center">

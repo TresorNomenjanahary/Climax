@@ -59,6 +59,7 @@
                     <ul class="nav navbar-nav navbar-nav-first">
                          <li><a href="index.php" class="smoothScroll">Accueil</a></li>
                          <li><a href="php/actus.php" class="smoothScroll">Actualités</a></li>
+                         <li><a href="php/login.php" class="smoothScroll">Se connecter</a></li>
                     </ul>
                </div>
 

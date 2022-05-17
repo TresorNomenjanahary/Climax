@@ -37,19 +37,41 @@
     <link rel="stylesheet" href="css/templatemo-style.css">
   </head>
   <body>
+     <!-- PRE LOADER -->
+     <section class="preloader">
+          <div class="spinner">
 
-      <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
-        <div class="container">
-          <a class="navbar-brand" href="index.php">Climat Planet</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav mr-auto"></ul>
+               <span class="spinner-rotate"></span>
+               
+          </div>
+     </section>
+
+
+     <!-- MENU -->
+     <section class="navbar custom-navbar navbar-fixed-top" role="navigation">
+          <div class="container">
+
+               <div class="navbar-header">
+                    <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                    </button>
+
+                    <!-- lOGO TEXT HERE -->
+                    <a href="index.php" class="navbar-brand">Climat<span> - </span>Planet</a>
+               </div>
+
+               <!-- MENU LINKS -->
+               <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-nav-first">
+                         <li><a href="index.php" class="smoothScroll">Accueil</a></li>
+                         <li><a href="show.php" class="smoothScroll">Liste Actualités</a></li>
+                    </ul>
+               </div>
 
           </div>
-        </div>
-      </nav>
+     </section>
 
       <div class="container">
         <div class="row justify-content-center">
@@ -60,22 +82,22 @@
             <div class="card-body">
               <div class="row">
                 <div class="col-md">
-                    <a target="blank" href=<?php echo $upload_dir.$row['photo'] ?>><img src="<?php echo $upload_dir.$row['photo'] ?>" height="400"></a>
+                    <a target="blank" href=<?php echo $upload_dir.$row['image'] ?>><img src="<?php echo $upload_dir.$row['image'] ?>" height="400"></a>
                 </div>
                 <div class="col-md">
                     <h5 class="form-control">
                       <u>Titre:</u>
-                      <span><?php echo $row['titre'] ?></span>
+                      <span><?php echo $row['intitule'] ?></span>
                     </i></h5>
                     <h5 class="form-control">
                       <u>Contenu:</u>
-                      <span><?php echo $row['contenu'] ?></span>
+                      <span><?php echo $row['description'] ?></span>
                     </i></h5>
                     <h5 class="form-control">
                       <u>Date de Publication:</u>
-                      <span><?php echo $row['datePublication'] ?></span>
+                      <span><?php echo $row['date'] ?></span>
                     </i></h5>
-                      <a class="btn btn-outline-danger" href="bo/index.php"><i class="fa fa-sign-out-alt"></i><span>Retour</span></a>
+                      <a class="btn btn-outline-danger" href="index.php"><i class="fa fa-sign-out-alt"></i><span>Retour</span></a>
 
                 </div>
               </div>
