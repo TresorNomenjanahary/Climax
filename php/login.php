@@ -1,4 +1,9 @@
-
+<?php
+    session_start();
+    if(isset($_SESSION['admin'])){
+        header('Location:../bo/index.php');
+    }
+?>
 <!doctype html>
 <html lang="fr">
 
@@ -15,39 +20,40 @@
 
 <body>
     <div class="container-fluid ">
-        
-                <div class=" no-pdding login-box">
-                    <div class="row no-margin w-100 bklmj">
-                        <div class="col-lg-6 col-md-6 log-det">
-                            
-                            <h2>Login</h2>
-                            <div class="row no-margin past">
-                                <p>Connectez-vous, entrer vos identifiants. </p>
-                            </div>
 
+        <div class=" no-pdding login-box">
+            <div class="row no-margin w-100 bklmj">
+                <div class="col-lg-6 col-md-6 log-det">
+                    
+                    <h2>Login</h2>
+                    <div class="row no-margin past">
+                        <p>Connectez-vous, entrer vos identifiants. </p>
+                    </div>
 
-                            <div class="text-box-cont">
-                                <div class="input-group mb-3">
-                                    <input type="text" class="form-control" placeholder="Email" aria-label="email" aria-describedby="basic-addon1">
-                                </div>
-                                 <div class="input-group mb-3">
-                                    <input type="text" class="form-control" placeholder="Mot de passe" aria-label="mdp" aria-describedby="basic-addon1">
-                                </div>
-                                <div class="right-bkij mb-3">
-                                    <button class="btn btn-success btn-round">Connexion</button>
-                                </div> 
+                    <form method="POST" action="traitement.php?con=suc" >
+                        <div class="text-box-cont">
+                            <div class="input-group mb-3">
+                                <input type="email" class="form-control" placeholder="Email" >
                             </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 box-de">
-                            <div class="ditk-inf">
-                                <h2 class="w-100">Bienvenue Admin </h2>
-                                <p>Rejoigner l'équipe de Climat Planet <br> en vous connectant</p>
-                               <a href="../index.php"> <button class="btn btn-warning btn-round">Retour</button></a>
+                            <div class="input-group mb-3">
+                                <input type="password" class="form-control" placeholder="Mot de passe">
                             </div>
+                            <div class="right-bkij mb-3">
+                                <button class="btn btn-success btn-round">Connexion</button>
+                            </div> 
                         </div>
+                    </form>
+                </div>
+                <div class="col-lg-6 col-md-6 box-de">
+                    <div class="ditk-inf">
+                        <h2 class="w-100">Bienvenue Admin </h2>
+                        <p>Rejoigner l'équipe de Climat Planet <br> en vous connectant</p>
+                        <a href="../index.php"> <button class="btn btn-warning btn-round">Retour</button></a>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
        
 </body>
 
