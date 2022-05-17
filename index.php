@@ -77,7 +77,6 @@
                               <?php for($i=0; $i<count($top3news); $i++){ ?>
                                    <div class="col-md-8 col-sm-12">
                                         <h3><?php echo $top3news[$i]['intitule'];?></h3>
-                                        <h1><?php echo $top3news[$i]['description'];?></h1>
                                    </div>
                                    <?php }?>
                               </div>
@@ -115,7 +114,6 @@
           </div>
      </section>
 
-
      <!-- TEAM -->
      <section id="team" data-stellar-background-ratio="0.5">
           <div class="container">
@@ -130,10 +128,10 @@
                     <?php for($i=0; $i<count($recentData); $i++){ ?>                                      
                     <div class="col-md-4 col-sm-4">
                          <div class="team-thumb wow fadeInUp" data-wow-delay="0.2s">
-                              <img src="images/"<?= $recentData[$i]['image'];?> class="img-responsive" alt="">
+                              <img src="images/"<?php echo $recentData[$i]['image']?> class="img-responsive" alt="">
                                    <div class="team-hover">
                                         <div class="team-item">
-                                             <h4><a href=<?=$recentData[$i]['intitule'] .$recentData[$i]['intitule']?>></a></h4> 
+                                             <h4><a href=<?php echo $recentData[$i]['intitule'] .$recentData[$i]['intitule']?>></a></h4> 
                                         </div>
                                    </div>
                          </div>
@@ -143,20 +141,6 @@
                          </div>
                     </div>
 
-                    <div class="col-md-4 col-sm-4">
-                         <div class="team-thumb wow fadeInUp" data-wow-delay="0.4s">
-                              <img src="images/"<?=$recentData[$i]['image']?> class="img-responsive" alt="">
-                                   <div class="team-hover">
-                                        <div class="team-item">
-                                             <h4><a href=<?=$recentData[$i]['idArticle'] .$recentData[$i]['intitule']?>></a></h4>
-                                        </div>
-                                   </div>
-                         </div>
-                         <div class="team-info">
-                              <h3><?=$recentData[$i]['intitule']?></h3>
-                              <p><?=$recentData[$i]['date']?></p>
-                         </div>
-                    </div>
                     <?php }?>
                </div>
           </div>
@@ -204,7 +188,7 @@
                     <div class="col-md-3 col-sm-8">
                          <div class="footer-info">
                               <div class="section-title">
-                                   <h2 class="wow fadeInUp" data-wow-delay="0.2s">Trouvez-nous</h2>
+                                   <h2 class="wow fadeInUp" data-wow-delay="0.2s">Trouvez-nous sur :</h2>
                               </div>
                               <address class="wow fadeInUp" data-wow-delay="0.4s">
                                    <p>101 Antananarivo, Andoharanofotsy Mandrimena<br>IT University<br>Route RN7 vers Antsirabe</p>
