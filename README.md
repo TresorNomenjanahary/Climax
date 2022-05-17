@@ -15,3 +15,4 @@ FTP username:	epiz_31745952
 MySQL hostname:	sql204.epizy.com
 MySQL username:	epiz_31745952
 
+website : climattp.infinityfreeapp.com
