@@ -188,7 +188,7 @@
                     <div class="col-md-3 col-sm-8">
                          <div class="footer-info">
                               <div class="section-title">
-                                   <h2 class="wow fadeInUp" data-wow-delay="0.2s">Trouvez-nous</h2>
+                                   <h2 class="wow fadeInUp" data-wow-delay="0.2s">Trouvez-nous sur :</h2>
                               </div>
                               <address class="wow fadeInUp" data-wow-delay="0.4s">
                                    <p>101 Antananarivo, Andoharanofotsy Mandrimena<br>IT University<br>Route RN7 vers Antsirabe</p>
