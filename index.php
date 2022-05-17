@@ -53,13 +53,13 @@
                     </button>
 
                     <!-- lOGO TEXT HERE -->
-                    <a href="index.html" class="navbar-brand">Climat<span> - </span>Planet</a>
+                    <a href="index.php" class="navbar-brand">Climat<span> - </span>Planet</a>
                </div>
 
                <!-- MENU LINKS -->
                <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-nav-first">
-                         <li><a href="php/accueil.php" class="smoothScroll">Accueil</a></li>
+                         <li><a href="index.php" class="smoothScroll">Accueil</a></li>
                          <li><a href="php/actus.php" class="smoothScroll">Actualités</a></li>
                     </ul>
                </div>
@@ -94,7 +94,7 @@
                     <div class="col-md-6 col-sm-12">
                          <div class="about-info">
                               <div class="section-title wow fadeInUp" data-wow-delay="0.2s">
-                                   <h4>Le Recahuffement climatique</h4>
+                                   <h4>Le Rechauffement climatique</h4>
                                    <h2>La température moyenne globale de la planète a augmenté de 1.1°C entre 1850 et 2017. Parallèlement, la France a subi une augmentation moyenne de 1.5°C depuis 1900</h2>
                               </div>
 
@@ -134,7 +134,7 @@
                               <img src=<?="images/".$recentData[$i]['image']?> class="img-responsive" alt="">
                                    <div class="team-hover">
                                         <div class="team-item">
-                                             <h4><?=$recentData[$i]['intitule']?></h4> 
+                                             <h4><a href=<?=$recentData[$i]['id'] .$recentData[$i]['intitule']?>></a></h4> 
                                         </div>
                                    </div>
                          </div>
@@ -149,8 +149,7 @@
                               <img src=<?="images/".$recentData[$i]['image']?> class="img-responsive" alt="">
                                    <div class="team-hover">
                                         <div class="team-item">
-                                             <h4><?=$recentData[$i]['intitule']?></h4>
-                                          
+                                             <h4><a href=<?=$recentData[$i]['id'] .$recentData[$i]['intitule']?>></a></h4>
                                         </div>
                                    </div>
                          </div>

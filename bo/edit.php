@@ -44,21 +44,15 @@
     if (mysqli_num_rows($result) > 0) {
       $row = mysqli_fetch_assoc($result);
     }else {
-      $errorMsg = 'Could not Find Any Record';
+      $errorMsg = 'Ajout inexistant';
     }
   }
 
   if(isset($_POST['Submit'])){
-    $region = $_POST['region'];
     $titre = $_POST['titre'];
     $contenu = $_POST['contenu'];
-    $auteur = $_POST['auteur'];
-    $source = $_POST['source'];
     $date = $_POST['date'];
 
-		/*$name = $_POST['name'];
-    $contact = $_POST['contact'];
-		$email = $_POST['email'];*/
 
 		$imgName = $_FILES['image']['name'];
 		$imgTmp = $_FILES['image']['tmp_name'];
@@ -131,18 +125,30 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <title>PHP CRUD</title>
+    <title>Climat Planet</title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="css/templatemo-style.css">
   </head>
   <body>
 
     <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
       <div class="container">
-        <a class="navbar-brand" href="index.php">PHP CRUD WITH IMAGE</a>
+        <a class="navbar-brand" href="index.php">Ajouter une Actualité</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -160,7 +166,7 @@
           <div class="col-md-6">
             <div class="card">
               <div class="card-header">
-                Edit
+                Modifier
               </div>
               <div class="card-body">
                 <form class="" action="" method="post" enctype="multipart/form-data">
@@ -177,30 +183,22 @@
                       <input type="text" class="form-control" name="titre"  placeholder="Titre" value="<?php echo $row['titre']; ?>">
                     </div>
                     <div class="form-group">
-                      <label for="contact">Contenu:</label>
+                      <label for="contact">Description:</label>
                       <textarea type="text" class="form-control" name="contenu"><?php echo $row['contenu']; ?></textarea>
                     </div>
                     <div class="form-group">
-                      <label for="email">Auteur:</label>
-                      <input type="text" class="form-control" name="auteur" placeholder="Auteur" value="<?php echo $row['auteur']; ?>">
-                    </div>
-                    <div class="form-group">
-                      <label for="email">Source:</label>
-                      <input type="text" class="form-control" name="source" placeholder="Source" value="<?php echo $row['source']; ?>">
-                    </div>
-                    <div class="form-group">
-                      <label for="email">Date Publication(YYYY-MM-DD):</label>
+                      <label for="email">Date de publication (YYYY-MM-DD):</label>
                       <input type="date" class="form-control" name="date" placeholder="Date Publication" value="<?php echo $row['datePublication']; ?>">
                     </div>
                     <div class="form-group">
-                      <label for="image">Choose Image:</label>
+                      <label for="image">Séléctionner une Image:</label>
                       <div class="col-md-12">
                         <img src="<?php echo $upload_dir.$row['photo'] ?>" width="100">
                         <input type="file" class="form-control" name="image" value="">
                       </div>
                     </div>
                     <div class="form-group">
-                      <button type="submit" name="Submit" class="btn btn-primary waves">Submit</button>
+                      <button type="submit" name="Submit" class="btn btn-primary waves">Valider</button>
                     </div>
                 </form>
               </div>
@@ -208,7 +206,14 @@
           </div>
         </div>
       </div>
-    <script src="js/bootstrap.min.js" charset="utf-8"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" charset="utf-8"></script>
+      <!-- SCRIPTS -->
+      <script src="js/jquery.js"></script>
+     <script src="js/bootstrap.min.js"></script>
+     <script src="js/jquery.stellar.min.js"></script>
+     <script src="js/wow.min.js"></script>
+     <script src="js/owl.carousel.min.js"></script>
+     <script src="js/jquery.magnific-popup.min.js"></script>
+     <script src="js/smoothscroll.js"></script>
+     <script src="js/custom.js"></script>
   </body>
 </html>

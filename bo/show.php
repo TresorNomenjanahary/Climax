@@ -17,19 +17,30 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
     <title>Climat Planet</title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="css/templatemo-style.css">
   </head>
   <body>
 
       <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
         <div class="container">
-          <a class="navbar-brand" href="index.php">Crud</a>
+          <a class="navbar-brand" href="index.php">Climat Planet</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -61,17 +72,10 @@
                       <span><?php echo $row['contenu'] ?></span>
                     </i></h5>
                     <h5 class="form-control">
-                      <u>Auteur:</u>
-                      <span><?php echo $row['auteur'] ?></span>
-                    </i></h5>
-                    <h5 class="form-control">
-                      <u>Date Publication:</u>
+                      <u>Date de Publication:</u>
                       <span><?php echo $row['datePublication'] ?></span>
                     </i></h5>
-                    <h5 class="form-control">
-                      <span> <a href=<?php echo $row['source'] ?>> Source </a> </span>
-                    </i></h5>
-                      <a class="btn btn-outline-danger" href="index.php"><i class="fa fa-sign-out-alt"></i><span>Back</span></a>
+                      <a class="btn btn-outline-danger" href="bo/index.php"><i class="fa fa-sign-out-alt"></i><span>Retour</span></a>
 
                 </div>
               </div>
@@ -81,13 +85,14 @@
 
       </div>
 
-
-      <script src="js/bootstrap.min.js" charset="utf-8"></script>
-      <script src="https://code.jquery.com/jquery-3.3.1.min.js" charset="utf-8"></script>
-      <script type="text/javascript">
-      $(document).ready(function() {
-          $('#example').DataTable();
-        } );
-      </script>
+      <!-- SCRIPTS -->
+      <script src="js/jquery.js"></script>
+     <script src="js/bootstrap.min.js"></script>
+     <script src="js/jquery.stellar.min.js"></script>
+     <script src="js/wow.min.js"></script>
+     <script src="js/owl.carousel.min.js"></script>
+     <script src="js/jquery.magnific-popup.min.js"></script>
+     <script src="js/smoothscroll.js"></script>
+     <script src="js/custom.js"></script>
     </body>
   </html>

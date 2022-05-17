@@ -5,12 +5,24 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <title>PHP CRUD</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css">
+    <title>Climat Planet</title>
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/animate.css">
+<link rel="stylesheet" href="css/owl.carousel.css">
+<link rel="stylesheet" href="css/owl.theme.default.min.css">
+<link rel="stylesheet" href="css/magnific-popup.css">
+
+<!-- MAIN CSS -->
+<link rel="stylesheet" href="css/templatemo-style.css">
   </head>
   <body>
 
@@ -33,7 +45,7 @@
         <div class="row justify-content-center">
           <div class="col-md-6">
             <div class="card">
-              <div class="card-header">Create</div>
+              <div class="card-header">Ajouter unn article </div>
               <div class="card-body">
                 <form class="" action="add.php" method="post" enctype="multipart/form-data">
                     <div class="form-group">
@@ -51,14 +63,6 @@
                     <div class="form-group">
                       <label for="contact">Contenu:</label>
                       <textarea type="text" class="form-control" name="contenu"></textarea>
-                    </div>
-                    <div class="form-group">
-                      <label for="email">Auteur:</label>
-                      <input type="text" class="form-control" name="auteur" placeholder="Auteur">
-                    </div>
-                    <div class="form-group">
-                      <label for="email">Source:</label>
-                      <input type="text" class="form-control" name="source" placeholder="Source">
                     </div>
                     <div class="form-group">
                       <label for="email">Date Publication(YYYY-MM-DD):</label>
@@ -80,7 +84,14 @@
         </div>
       </div>
 
-    <script src="js/bootstrap.min.js" charset="utf-8"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" charset="utf-8"></script>
+        <!-- SCRIPTS -->
+        <script src="js/jquery.js"></script>
+     <script src="js/bootstrap.min.js"></script>
+     <script src="js/jquery.stellar.min.js"></script>
+     <script src="js/wow.min.js"></script>
+     <script src="js/owl.carousel.min.js"></script>
+     <script src="js/jquery.magnific-popup.min.js"></script>
+     <script src="js/smoothscroll.js"></script>
+     <script src="js/custom.js"></script>
   </body>
 </html>

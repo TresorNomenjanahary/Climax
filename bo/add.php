@@ -39,8 +39,6 @@
   	$region = $_POST['region'];
     $titre = $_POST['titre'];
     $contenu = $_POST['contenu'];
-    $auteur = $_POST['auteur'];
-    $source = $_POST['source'];
     $date = $_POST['date'];
 
     /*$name = $_POST['name'];
@@ -70,10 +68,10 @@
 				if($imgSize < 5000000){
 					//move_uploaded_file($imgTmp ,$upload_dir.$userPic);
 				}else{
-					$errorMsg = 'Image too large';
+					$errorMsg = 'Image trop grand';
 				}
 			}else{
-				$errorMsg = 'Please select a valid image';
+				$errorMsg = 'Choisissez une image valide';
 			}
 		/*}*/
 
@@ -81,13 +79,13 @@
 			$titres = mysqli_real_escape_string($conn, $titre);
 			$contenus = mysqli_real_escape_string($conn, $contenu);
 			$auteurs = mysqli_real_escape_string($conn, $auteur);
-			$sql = "insert into article(idRegion, titre, contenu, auteur, source, photo, datePublication, slug)
-					values('%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s')";
-			$sql = sprintf($sql,$region,$titres,$contenus,$auteurs,$source,$userPic,$date,slugify($titre));
+			$sql = "insert into article(idArticle, intitule, description, date,image)
+					values('%s', '%s', '%s', '%s', '%s')";
+			$sql = sprintf($sql,$titres,$contenus,$date,$userPic);
 
 			$result = mysqli_query($conn, $sql);
 			if($result){
-				$successMsg = 'New record added successfully';
+				$successMsg = 'Vous avez ajouter une nouvelle actualité';
 				header('Location: index.php');
 			}else{
 				$errorMsg = 'Error '.mysqli_error($conn);
