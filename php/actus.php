@@ -1,8 +1,9 @@
 <?php
-    require('php/fonction.php');
+    require ('./inc/fonction.php');
+    
     $data = getDataById($_GET["idArticle"], $_GET['url']);
     if(count($data)==0){
-        header('Location:../index.php');
+        header('Location: index.php');
     }
     $top3news = getTop3News();
 ?>

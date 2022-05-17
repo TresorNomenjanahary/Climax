@@ -1,10 +1,21 @@
 <?php
-    require('../inc/fonction.php');
-    $data = getDataById($_GET["idArticle"], $_GET['url']);
-    if(count($data)==0){
-        header('Location:../index.php');
-    }
-    $top3news = getTop3News();
+  include('db.php');
+  $upload_dir = 'images/';
+
+  if(isset($_GET['delete'])){
+		$id = $_GET['delete'];
+		$sql = "select * from article where idArticle = ".$id;
+		$result = mysqli_query($conn, $sql);
+		if(mysqli_num_rows($result) > 0){
+			$row = mysqli_fetch_assoc($result);
+			$image = $row['image'];
+			unlink($upload_dir.$image);
+			$sql = "delete from article where idArticle =".$id;
+			if(mysqli_query($conn, $sql)){
+				header('location: acceuil.php');
+			}
+		}
+	}
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -59,7 +70,7 @@
                     <ul class="nav navbar-nav navbar-nav-first">
                          <li><a href="index.php" class="smoothScroll">Accueil</a></li>
                          <li><a href="php/actus.php" class="smoothScroll">Actualités</a></li>
-                         <li><a href="php/login.php" class="smoothScroll">Se Connecter</a></li>
+                         <li><a href="traitement.php?act=deconnect" class="smoothScroll">Se Déconnecter</a></li>
                     </ul>
                </div>
 
