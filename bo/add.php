@@ -1,6 +1,6 @@
 <?php
 	require_once('db.php');
-	$upload_dir = 'uploads/';
+	$upload_dir = 'bo/';
 	function getRegion($conn)
 	{
 		$requete = "SELECT * FROM Region";

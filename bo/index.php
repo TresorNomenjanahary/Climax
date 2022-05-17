@@ -1,6 +1,6 @@
 <?php
   include('db.php');
-  $upload_dir = 'uploads/';
+  $upload_dir = 'bo/';
 
   if(isset($_GET['delete'])){
 		$id = $_GET['delete'];

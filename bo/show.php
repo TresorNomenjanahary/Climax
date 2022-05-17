@@ -1,6 +1,6 @@
 <?php
   require_once('db.php');
-  $upload_dir = 'uploads/';
+  $upload_dir = 'bo/';
 
   if (isset($_GET['id'])) {
     $id = $_GET['id'];

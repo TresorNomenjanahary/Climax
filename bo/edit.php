@@ -1,6 +1,6 @@
 <?php
   require_once('db.php');
-  $upload_dir = 'uploads/';
+  $upload_dir = 'bo/';
 
   function getRegion($conn)
   {
@@ -49,8 +49,8 @@
   }
 
   if(isset($_POST['Submit'])){
-    $titre = $_POST['titre'];
-    $contenu = $_POST['contenu'];
+    $titre = $_POST['intitule'];
+    $contenu = $_POST['description'];
     $date = $_POST['date'];
 
 
@@ -72,10 +72,10 @@
 					unlink($upload_dir.$row['image']);
 					move_uploaded_file($imgTmp ,$upload_dir.$userPic);
 				}else{
-					$errorMsg = 'Image too large';
+					$errorMsg = 'Image trop large';
 				}
 			}else{
-				$errorMsg = 'Please select a valid image';
+				$errorMsg = 'Choisir une image bien';
 			}
 		}else{
 
@@ -102,18 +102,17 @@
           where id=".$id;*/
 
       $sql = "update article
-                set idRegion = '%s', titre = '%s', contenu = '%s', auteur = '%s', source = '%s',
-                  datePublication = '%s', photo = '%s', slug = '%s' where id=%s";
+                set idArticle = '%s', intitule = '%s', description = '%s', 
+                  date= '%s', image = '%s' where id=%s";
 
       $titres = mysqli_real_escape_string($conn, $titre);
       $contenus = mysqli_real_escape_string($conn, $contenu);
-      $auteurs = mysqli_real_escape_string($conn, $auteur);
 
-      $sql=sprintf($sql, $region, $titres, $contenus, $auteurs, $source, $date, $imgName, slugify($titre), $id);
+      $sql=sprintf($sql, $region, $titres, $contenus, $date, $imgName, slugify($titre), $id);
 
       $result = mysqli_query($conn, $sql);
 			if($result){
-				$successMsg = 'New record updated successfully';
+				$successMsg = 'Modification reussi';
 				header('Location:index.php');
 			}else{
 				$errorMsg = 'Error '.mysqli_error($conn);
@@ -200,15 +199,15 @@
                     </div>
                     <div class="form-group">
                       <label for="name">Titre:</label>
-                      <input type="text" class="form-control" name="titre"  placeholder="Titre" value="<?php echo $row['intitule']; ?>">
+                      <input type="text" class="form-control" name="intitule"  placeholder="Titre" value="<?php echo $row['intitule']; ?>">
                     </div>
                     <div class="form-group">
                       <label for="contact">Description:</label>
-                      <textarea type="text" class="form-control" name="contenu"><?php echo $row['description']; ?></textarea>
+                      <textarea type="text" class="form-control" name="description"><?php echo $row['description']; ?></textarea>
                     </div>
                     <div class="form-group">
                       <label for="email">Date de publication (YYYY-MM-DD):</label>
-                      <input type="date" class="form-control" name="date" placeholder="Date Publication" value="<?php echo $row['date']; ?>">
+                      <input type="date" class="form-control" name="date" placeholder="Date de Publication" value="<?php echo $row['date']; ?>">
                     </div>
                     <div class="form-group">
                       <label for="image">Séléctionner une Image:</label>

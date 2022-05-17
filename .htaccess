@@ -2,7 +2,7 @@ RewriteEngine on
 # RewriteRule (.*)/(.*)-([_a-z0-9]*)$  Contenu/fiche?categor=$1&url=$2&id=$3 [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-# RewriteRule ^(.*)$ index.html/$1 [L,QSA]
+RewriteRule ^(.*)$ index.php/$1 [L,QSA]
 AddDefaultCharset utf-8
 AddCharset utf-8 .html .css .js .xml .json .rss .atom
 
@@ -15,9 +15,9 @@ AddCharset utf-8 .html .css .js .xml .json .rss .atom
   # Your document html
   ExpiresByType text/html                 "access plus 0 seconds"
   # Data
-  ExpiresByType text/xml                  "access plus 0 seconds"
-  ExpiresByType application/xml           "access plus 0 seconds"
-  ExpiresByType application/json          "access plus 0 seconds"
+  ExpiresByType text/xml                  "access plus 1 month"
+  ExpiresByType application/xml           "access plus 1 month"
+  ExpiresByType application/json          "access plus 1 month"
   # Feed
   ExpiresByType application/rss+xml       "access plus 1 month"
   ExpiresByType application/atom+xml      "access plus 1 month"
