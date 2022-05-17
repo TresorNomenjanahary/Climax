@@ -2,20 +2,21 @@
     session_start();
 
     require 'fonctionAdmin.php';
-	$act = $_GET['act'];
-	if($act==='log'){
+
+	$act = $_GET['con'];
+	if($act==='suc'){
 		$email = $_POST["email"];
 		$mdp = $_POST["mdp"];
 		$admin = login($email, $mdp);
         if($admin!=null){
             $_SESSION['admin'] = $admin;
-            header('Location: acceuil.php');
+            header('Location: index.php');
         }else{
-            header('Location: index.php?er=0');
+            header('Location: ../php/login.php?er=0');
         }
 	}
     if($act=='deconnect'){
         session_destroy();
-        header('Location: index.php');
+        header('Location: ../php/login.php');
     }
 ?>

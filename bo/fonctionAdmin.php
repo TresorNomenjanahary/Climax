@@ -2,7 +2,7 @@
     require '../bo/connexion.php';
 	function login($email, $pass)
 	{
-		$requete = sprintf("SELECT * FROM admin WHERE email='%s' AND mdp=sha1('%s')", 
+		$requete = sprintf("SELECT * FROM admin WHERE email='%s' AND mdp='%s'", 
 					mysqli_real_escape_string(dbconnect(), $email), 
 					mysqli_real_escape_string(dbconnect(), $pass));
 		$result = mysqli_query(dbconnect(),$requete);
